@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:title="">
+        <menu>
+
+        </menu>
+    </item>
+
+    <item android:title="FINANCE"
+        android:id="@+id/finance"
+
+        android:icon="@drawable/inbox"/>
+
+    <item android:title="">
+        <menu>
+
+        </menu>
+    </item>
+
+    <item android:title="SALES AND MARKETING"
+        android:id="@+id/salesandmarketing"
+        android:icon="@drawable/inbox"/>
+
+    <item android:title="">
+        <menu>
+
+        </menu>
+    </item>
+
+    <item android:title="NOTIFICATION"
+        android:id="@+id/notification"
+        android:icon="@drawable/inbox"/>
+    <item android:title="">
+        <menu>
+
+        </menu>
+    </item>
+
+
+    <item android:title="ABOUT US"
+        android:id="@+id/aboutus"
+        android:icon="@drawable/inbox"/>
+    <item android:title="">
+        <menu>
+
+        </menu>
+    </item>
+
+    <item android:title="REPORTS"
+        android:id="@+id/reports"
+        android:icon="@drawable/inbox"/>
+    <item android:title="">
+        <menu>
+
+        </menu>
+    </item>
+
+    <item android:title="CONTACT US"
+        android:id="@+id/contactus"
+        android:icon="@drawable/inbox"/>
+    <item android:title="">
+        <menu>
+
+        </menu>
+    </item>
+
+    <item android:title="FAQ"
+        android:id="@+id/faq"
+        android:icon="@drawable/inbox"/>
+
+    <item android:title="">
+        <menu>
+
+        </menu>
+    </item>
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <group android:id="@+id/group_settings_id">
+
+        <item android:title="MY ACCOUNT"
+              android:id="@+id/myaccount"
+            android:icon="@drawable/inbox"/>
+
+    </group>
+
+
+</menu>

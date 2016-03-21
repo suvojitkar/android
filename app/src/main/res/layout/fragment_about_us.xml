@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="10dp"
+    android:fillViewport="false">
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+
+        <ImageView
+            android:src="@drawable/aboutus"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:id="@+id/imageView" />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textStyle="bold"
+            android:paddingLeft="7dp"
+            android:paddingRight="7dp"
+            android:text="\n\nHindustan Unilever Limited (HUL) is India's largest Fast Moving Consumer Goods
+Company with a heritage of over 80 years in India and touches the lives of two
+out of three Indians.\n\n
+HUL works to create a better future every day and helps people feel good,
+look good and get more out of life with brands and services that are good for
+them and good for others.\n\n
+With over 35 brands spanning 20 distinct categories such as soaps, detergents,
+shampoos, skin care, toothpastes, deodorants, cosmetics, tea, coffee, packaged
+foods, ice cream, and water purifiers the Company is a part of the everyday
+life of millions of consumers across India.Its portfolio includes leading
+household brands such as Lux, Lifeboy, Surf Excel, Rin, Wheel, Fair and Lovely,
+Pond's, Vaseline, Lakmé, Dove, Clinic Plus, Sunsilk, Pepsodent, Closeup, Axe,
+Brooke Bond, Bru, Knorr, Kissan, Kwality Wall's and Pureit.\n\n
+The Company has over 16,000 employees and has an annual turnover of
+INR 30,170 crores (financial year 2014 – 15). HUL is a subsidiary of Unilever,
+one of the world’s leading suppliers of fast moving consumer goods with strong
+local roots in more than 100 countries across the globe with annual sales of
+€53.3 billion in 2015. Unilever has 67.25% shareholding in HUL.
+"/>
+    </LinearLayout>
+
+</ScrollView>
