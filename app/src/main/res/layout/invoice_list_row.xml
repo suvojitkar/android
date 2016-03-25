@@ -14,7 +14,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:gravity="center"
-            android:background="@color/common_plus_signin_btn_text_dark_disabled"
+            android:background="#008080"
             android:padding="7dp"
             android:textSize="@dimen/title"
             android:text="PROD"

@@ -22,7 +22,6 @@ public class calander extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
 
         View v = inflater.inflate(R.layout.fragment_calander,null);
-
          Button bcal = (Button) v.findViewById(R.id.bcal);
 
          bcal.setOnClickListener(new View.OnClickListener() {
@@ -37,12 +36,6 @@ public class calander extends Fragment {
                 intent.setData(CalendarContract.Events.CONTENT_URI);
                 intent.putExtra(CalendarContract.Events.TITLE, "Key Event 1");
                 intent.putExtra(CalendarContract.Events.ALL_DAY, true);
-                intent.putExtra(
-                        CalendarContract.EXTRA_EVENT_BEGIN_TIME,
-                        cal.getTime().getTime());
-                intent.putExtra(
-                        CalendarContract.EXTRA_EVENT_END_TIME,
-                        cal.getTime().getTime() + 600000);
                 startActivity(intent);
             }
         });

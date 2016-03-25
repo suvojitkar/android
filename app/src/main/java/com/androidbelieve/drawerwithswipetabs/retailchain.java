@@ -15,7 +15,7 @@ public class retailchain extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
 
-        View v = inflater.inflate(R.layout.fragment_calander,null);
+        View v = inflater.inflate(R.layout.fragment_retailchain,null);
 
         Button bmap = (Button) v.findViewById(R.id.bmap);
 

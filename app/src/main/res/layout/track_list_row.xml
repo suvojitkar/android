@@ -13,7 +13,7 @@
             android:id="@+id/product"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="@color/common_plus_signin_btn_text_dark_disabled"
+            android:background="#008080"
             android:padding="7dp"
             android:textColor="#fff"
             android:textSize="@dimen/title"
