@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="8dp">
+    <RelativeLayout
+        android:orientation="vertical" android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <!-- Customer ID -->
+        <TextView
+            android:id="@+id/cid"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:background="@color/common_plus_signin_btn_text_dark_disabled"
+            android:padding="7dp"
+            android:textSize="@dimen/title"
+            android:text="PROD"
+            android:textStyle="bold"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true" />
+
+        <!-- Billing Document -->
+        <TextView
+            android:id="@+id/bdoc"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/cid"
+            android:text="BDoc"
+            android:textStyle="italic"
+            android:padding="7dp"
+            android:textSize="@dimen/tag" />
+
+
+        <!-- Product Qty -->
+        <TextView
+            android:id="@+id/pqty"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/bdoc"
+            android:textStyle="italic"
+            android:padding="7dp"
+            android:text="Pqty"
+            android:textSize="@dimen/tag" />
+
+        <!-- Payment Method -->
+        <TextView
+            android:id="@+id/pmethod"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/pqty"
+            android:textStyle="italic"
+            android:padding="7dp"
+            android:text="Method"
+            android:textSize="@dimen/tag" />
+
+        <!-- Bill Date -->
+        <TextView
+            android:id="@+id/bdate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:padding="7dp"
+            android:textColor="@color/year"
+            android:text="BDate"
+            android:textStyle="italic"
+            android:textSize="@dimen/price" />
+    </RelativeLayout>
+</android.support.v7.widget.CardView>

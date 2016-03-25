@@ -7,6 +7,17 @@
         </menu>
     </item>
 
+    <item android:title="PRODUCTS"
+        android:id="@+id/products"
+
+        android:icon="@drawable/inbox"/>
+
+    <item android:title="">
+        <menu>
+
+        </menu>
+    </item>
+
     <item android:title="FINANCE"
         android:id="@+id/finance"
 
@@ -49,6 +60,15 @@
 
     <item android:title="REPORTS"
         android:id="@+id/reports"
+        android:icon="@drawable/inbox"/>
+    <item android:title="">
+        <menu>
+
+        </menu>
+    </item>
+
+    <item android:title="TRACKING STATUS"
+        android:id="@+id/track"
         android:icon="@drawable/inbox"/>
     <item android:title="">
         <menu>

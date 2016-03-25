@@ -14,11 +14,9 @@ import com.android.volley.Response;
 import com.android.volley.VolleyError;
 import com.android.volley.VolleyLog;
 import com.android.volley.toolbox.JsonArrayRequest;
-import com.androidbelieve.drawerwithswipetabs.adapter.InvoiceList;
-import com.androidbelieve.drawerwithswipetabs.adapter.TrackStatusList;
+import com.androidbelieve.drawerwithswipetabs.adapter.CustomListAdapter;
 import com.androidbelieve.drawerwithswipetabs.app.AppController;
-import com.androidbelieve.drawerwithswipetabs.model.Invoice_Model;
-import com.androidbelieve.drawerwithswipetabs.model.Track;
+import com.androidbelieve.drawerwithswipetabs.model.Movie;
 
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -27,28 +25,27 @@ import org.json.JSONObject;
 import java.util.ArrayList;
 import java.util.List;
 
-
-public class Invoice extends Fragment {
+public class Products extends Fragment {
 
     // Log tag
     private static final String TAG = MainActivity.class.getSimpleName();
 
     // Movies json url
-    private static final String url = "http://mehuljain160.esy.es/invoice.php";
+    private static final String url = "http://mehuljain160.esy.es/feed.php";
     private ProgressDialog pDialog;
-    private List<Invoice_Model> movieList = new ArrayList<Invoice_Model>();
+    private List<Movie> movieList = new ArrayList<Movie>();
     private ListView listView;
-    private InvoiceList adapter;
+    private CustomListAdapter adapter;
 
+    @Nullable
     @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container,
-                             Bundle savedInstanceState) {
-        // Inflate the layout for this fragment
-        View v = inflater.inflate(R.layout.fragment_invoice,container,false);
+    public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
+
+        View v = inflater.inflate(R.layout.fragment_products,container,false);
 
 
         listView = (ListView)v.findViewById(R.id.list);
-        adapter = new InvoiceList(getActivity(), movieList);
+        adapter = new CustomListAdapter(getActivity(), movieList);
         listView.setAdapter(adapter);
 
         pDialog = new ProgressDialog(getActivity());
@@ -69,12 +66,20 @@ public class Invoice extends Fragment {
                             try {
 
                                 JSONObject obj = response.getJSONObject(i);
-                                Invoice_Model movie = new Invoice_Model();
-                                movie.setCustId(obj.getString("Customer_ID"));
-                                movie.setBillDate(obj.getString("Billing_Date"));
-                                movie.setBillDoc(obj.getString("Billing_Document"));
-                                movie.setProdQty(obj.getString("product_qty"));
-                                movie.setPaymentMethod(obj.getString("Payment_Method"));
+                                Movie movie = new Movie();
+                                movie.setTitle(obj.getString("title"));
+                                movie.setThumbnailUrl(obj.getString("image"));
+                                movie.setPrice(obj.getInt("price"));
+                                movie.setTag(((Number) obj.get("tag"))
+                                        .doubleValue());
+
+                                // Genre is json array
+                                JSONArray genreArry = obj.getJSONArray("genre");
+                                ArrayList<String> genre = new ArrayList<String>();
+                                for (int j = 0; j < genreArry.length(); j++) {
+                                    genre.add((String) genreArry.get(j));
+                                }
+                                movie.setGenre(genre);
 
                                 // adding movie to movies array
                                 movieList.add(movie);
@@ -115,6 +120,6 @@ public class Invoice extends Fragment {
             pDialog.dismiss();
             pDialog = null;
         }
-
     }
 }
+

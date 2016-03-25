@@ -1,8 +1,9 @@
 package com.androidbelieve.drawerwithswipetabs;
 
 import android.app.ProgressDialog;
+import android.content.Context;
+import android.net.Uri;
 import android.os.Bundle;
-import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
 import android.util.Log;
 import android.view.LayoutInflater;
@@ -14,10 +15,10 @@ import com.android.volley.Response;
 import com.android.volley.VolleyError;
 import com.android.volley.VolleyLog;
 import com.android.volley.toolbox.JsonArrayRequest;
-import com.androidbelieve.drawerwithswipetabs.adapter.InvoiceList;
+import com.androidbelieve.drawerwithswipetabs.adapter.CustomListAdapter;
 import com.androidbelieve.drawerwithswipetabs.adapter.TrackStatusList;
 import com.androidbelieve.drawerwithswipetabs.app.AppController;
-import com.androidbelieve.drawerwithswipetabs.model.Invoice_Model;
+import com.androidbelieve.drawerwithswipetabs.model.Movie;
 import com.androidbelieve.drawerwithswipetabs.model.Track;
 
 import org.json.JSONArray;
@@ -27,28 +28,27 @@ import org.json.JSONObject;
 import java.util.ArrayList;
 import java.util.List;
 
-
-public class Invoice extends Fragment {
+public class Tracking extends Fragment {
 
     // Log tag
     private static final String TAG = MainActivity.class.getSimpleName();
 
     // Movies json url
-    private static final String url = "http://mehuljain160.esy.es/invoice.php";
+    private static final String url = "http://mehuljain160.esy.es/track.php";
     private ProgressDialog pDialog;
-    private List<Invoice_Model> movieList = new ArrayList<Invoice_Model>();
+    private List<Track> movieList = new ArrayList<Track>();
     private ListView listView;
-    private InvoiceList adapter;
+    private TrackStatusList adapter;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        View v = inflater.inflate(R.layout.fragment_invoice,container,false);
+        View v = inflater.inflate(R.layout.fragment_tracking,container,false);
 
 
         listView = (ListView)v.findViewById(R.id.list);
-        adapter = new InvoiceList(getActivity(), movieList);
+        adapter = new TrackStatusList(getActivity(), movieList);
         listView.setAdapter(adapter);
 
         pDialog = new ProgressDialog(getActivity());
@@ -69,12 +69,12 @@ public class Invoice extends Fragment {
                             try {
 
                                 JSONObject obj = response.getJSONObject(i);
-                                Invoice_Model movie = new Invoice_Model();
-                                movie.setCustId(obj.getString("Customer_ID"));
-                                movie.setBillDate(obj.getString("Billing_Date"));
-                                movie.setBillDoc(obj.getString("Billing_Document"));
-                                movie.setProdQty(obj.getString("product_qty"));
-                                movie.setPaymentMethod(obj.getString("Payment_Method"));
+                                Track movie = new Track();
+                                movie.setProduct(obj.getString("PRODUCT"));
+                                movie.setConfirmation(obj.getString("CONFIRMATION_STATUS"));
+                                movie.setDelivery(obj.getString("DELIVERY_STATUS"));
+                                movie.setDate(obj.getString("Date"));
+                                movie.setTransportation(obj.getString("TRANSPORTATION_STATUS"));
 
                                 // adding movie to movies array
                                 movieList.add(movie);

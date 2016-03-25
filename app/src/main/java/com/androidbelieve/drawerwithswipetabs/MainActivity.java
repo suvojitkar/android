@@ -46,6 +46,12 @@ public class MainActivity extends AppCompatActivity{
              public boolean onNavigationItemSelected(MenuItem menuItem) {
                 mDrawerLayout.closeDrawers();
 
+                 if (menuItem.getItemId() == R.id.products) {
+                     FragmentTransaction fragmentT = mFragmentManager.beginTransaction();
+                     fragmentT.replace(R.id.containerView,new Products()).commit();
+
+                 }
+
                  if (menuItem.getItemId() == R.id.contactus) {
                      FragmentTransaction fragmentT = mFragmentManager.beginTransaction();
                      fragmentT.replace(R.id.containerView,new Contactus()).commit();
@@ -95,6 +101,11 @@ public class MainActivity extends AppCompatActivity{
 
                  }
 
+                 if (menuItem.getItemId() == R.id.track) {
+                     FragmentTransaction fragmentT = mFragmentManager.beginTransaction();
+                     fragmentT.replace(R.id.containerView,new Tracking()).commit();
+
+                 }
 
 
 
