@@ -80,7 +80,7 @@ public class CustomListAdapter extends BaseAdapter {
         title.setText(m.getTitle());
 
         // tag
-        tag.setText("Tags: " + String.valueOf(m.getTag()));
+        tag.setText("" + String.valueOf(m.getTag()));
 
         // genre
         String genreStr = "";
