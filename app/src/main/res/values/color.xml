@@ -9,7 +9,8 @@
     <color name="list_row_hover_start_color">#ebeef0</color>
     <color name="list_row_hover_end_color">#ebeef0</color>
     <color name="black">#000</color>
-    <color name="orange">#FA0</color>
+    <color name="color_primary_dark">#303f9f</color>
+    <color name="orange">#303f9f</color>
     <color name="white">#FFF</color>
 
 </resources>

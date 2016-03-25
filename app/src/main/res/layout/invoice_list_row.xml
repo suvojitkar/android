@@ -18,6 +18,7 @@
             android:padding="7dp"
             android:textSize="@dimen/title"
             android:text="PROD"
+            android:textColor="#fff"
             android:textStyle="bold"
             android:layout_alignParentTop="true"
             android:layout_centerHorizontal="true" />

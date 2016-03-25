@@ -6,6 +6,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
+import android.widget.ImageButton;
 import android.widget.TextView;
 
 import com.androidbelieve.drawerwithswipetabs.R;
@@ -24,6 +25,7 @@ public class CustomListAdapter extends BaseAdapter {
     private Activity activity;
     private LayoutInflater inflater;
     private List<Movie> movieItems;
+    int count = 0;
     ImageLoader imageLoader = AppController.getInstance().getImageLoader();
 
     public CustomListAdapter(Activity activity, List<Movie> movieItems) {
@@ -63,6 +65,10 @@ public class CustomListAdapter extends BaseAdapter {
         TextView tag = (TextView) convertView.findViewById(R.id.tag);
         TextView genre = (TextView) convertView.findViewById(R.id.genre);
         TextView price = (TextView) convertView.findViewById(R.id.price);
+        final TextView quantity = (TextView) convertView.findViewById(R.id.qty);
+        ImageButton plus = (ImageButton) convertView.findViewById(R.id.additem);
+        ImageButton minus = (ImageButton) convertView.findViewById(R.id.remitem);
+
 
         // getting movie data for the row
         Movie m = movieItems.get(position);
@@ -87,6 +93,25 @@ public class CustomListAdapter extends BaseAdapter {
 
         // price
         price.setText(String.valueOf(m.getPrice()));
+
+        //Quantity
+
+        plus.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                count++;
+                quantity.setText(""+count);
+            }
+        });
+
+        minus.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if (count>0)
+                count--;
+                quantity.setText(""+count);
+            }
+        });
 
         return convertView;
     }

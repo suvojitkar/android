@@ -1,4 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
+
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="fill_parent"
     android:layout_height="wrap_content"
@@ -22,6 +26,7 @@
         android:layout_height="wrap_content"
         android:background="@color/common_plus_signin_btn_text_dark_disabled"
         android:padding="7dp"
+        android:textColor="#fff"
         android:textSize="@dimen/title"
         android:layout_alignTop="@+id/thumbnail"
         android:layout_toRightOf="@+id/thumbnail"
@@ -58,13 +63,57 @@
     <TextView
         android:id="@+id/price"
         android:text="price"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@color/year"
+        android:textStyle="italic"
+        android:gravity="right"
+        android:padding="7dp"
+        android:textSize="@dimen/price"
+        android:layout_below="@id/genre"
+        android:layout_alignRight="@+id/genre"
+        android:layout_alignEnd="@+id/genre" />
+
+    <!--Divider-->
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:padding="2dp"
+        android:id="@+id/divider"
+        android:layout_below="@id/price"
+        android:background="@android:color/darker_gray" />
+
+
+    <!--Qty + Button-->
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/additem"
+        android:src="@drawable/plus"
+        android:layout_below="@id/divider"
+        android:layout_alignParentLeft="true"/>
+
+    <!--Qty - Button-->
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/remitem"
+        android:src="@drawable/minus"
+        android:layout_alignParentBottom="true"
+        android:layout_toRightOf="@id/additem"/>
+
+    <!--Qty Display-->
+    <TextView
+        android:id="@+id/qty"
+        android:text="0"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
-        android:layout_alignParentRight="true"
+        android:layout_toRightOf="@id/remitem"
         android:textColor="@color/year"
         android:textStyle="italic"
-        android:padding="7dp"
-        android:textSize="@dimen/price" />
+        android:textSize="18dp"
+        android:padding="10dp" />
 
 </RelativeLayout>
+</android.support.v7.widget.CardView>

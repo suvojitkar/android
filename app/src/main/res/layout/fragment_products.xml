@@ -2,18 +2,23 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:paddingBottom="@dimen/activity_vertical_margin"
-    android:paddingLeft="@dimen/activity_horizontal_margin"
-    android:paddingRight="@dimen/activity_horizontal_margin"
-    android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="com.androidbelieve.drawerwithswipetabs.Products">
 
     <ListView
         android:id="@+id/list"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:divider="@color/list_divider"
-        android:dividerHeight="3dp"
+        android:layout_margin="5dp"
+        android:dividerHeight="5dp"
         android:listSelector="@drawable/list_row_selector" />
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="PLACE ORDER"
+        android:textColor="#fff"
+        android:textSize="@dimen/tag"
+        android:background="@color/color_primary_dark"
+        android:layout_gravity="center_horizontal|bottom" />
 
 </FrameLayout>
