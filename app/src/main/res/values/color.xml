@@ -12,7 +12,7 @@
     <color name="color_primary_dark">#303f9f</color>
     <color name="orange">#303f9f</color>
     <color name="white">#FFF</color>
-    <color name="blue">#0000cc</color>
+    <color name="blue">#fff</color>
     <color name="underline_default_color">#CCCCCC</color>
     <color name="underline_selected_color">#000</color>
     <color name="hintColor">#CCCCCC</color>

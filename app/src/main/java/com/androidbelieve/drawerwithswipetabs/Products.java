@@ -8,8 +8,11 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.EditText;
 import android.widget.ListView;
+import android.widget.Toast;
 
+import com.android.volley.Cache;
 import com.android.volley.Response;
 import com.android.volley.VolleyError;
 import com.android.volley.VolleyLog;
@@ -22,6 +25,7 @@ import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
+import java.io.UnsupportedEncodingException;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -53,6 +57,7 @@ public class Products extends Fragment {
         pDialog.setMessage("Loading...");
         pDialog.show();
 
+
         // Creating volley request obj
         JsonArrayRequest movieReq = new JsonArrayRequest(url,
                 new Response.Listener<JSONArray>() {
@@ -61,37 +66,20 @@ public class Products extends Fragment {
                         Log.d(TAG, response.toString());
                         hidePDialog();
 
-                        // Parsing json
-                        for (int i = 0; i < response.length(); i++) {
-                            try {
-
-                                JSONObject obj = response.getJSONObject(i);
-                                Movie movie = new Movie();
-                                movie.setTitle(obj.getString("title"));
-                                movie.setThumbnailUrl(obj.getString("image"));
-                                movie.setPrice(obj.getInt("price"));
-                                movie.setTag( obj.getString("tag"));
-                                movie.setGenre(obj.getString("genre"));
-
-                                // adding movie to movies array
-                                movieList.add(movie);
-
-                            } catch (JSONException e) {
-                                e.printStackTrace();
-                            }
-
-                        }
+                        Parse(response);
 
                         // notifying list adapter about data changes
                         // so that it renders the list view with updated data
                         adapter.notifyDataSetChanged();
                     }
                 }, new Response.ErrorListener() {
+
             @Override
             public void onErrorResponse(VolleyError error) {
                 VolleyLog.d(TAG, "Error: " + error.getMessage());
                 hidePDialog();
-
+                Toast.makeText(getActivity(), "Unable to fetch data.\nUsing Cached Data", Toast.LENGTH_SHORT).show();
+                useCached();
             }
         });
 
@@ -99,6 +87,53 @@ public class Products extends Fragment {
         AppController.getInstance().addToRequestQueue(movieReq);
 
         return v;
+    }
+
+    public void useCached(){
+        //Volley Cache
+        Cache cache = AppController.getInstance().getRequestQueue().getCache();
+        Cache.Entry entry = cache.get(url);
+
+        try {
+//            pDialog.hide();
+            String data = new String(entry.data, "UTF-8");
+            JSONArray a = new JSONArray(data);
+
+            Parse(a);
+
+            // notifying list adapter about data changes
+            // so that it renders the list view with updated data
+            adapter.notifyDataSetChanged();
+
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+
+        AppController.getInstance().getRequestQueue().getCache().invalidate(url, true);
+    }
+
+    public void  Parse(JSONArray response){
+
+        // Parsing json
+        for (int i = 0; i < response.length(); i++) {
+            try {
+
+                JSONObject obj = response.getJSONObject(i);
+                Movie movie = new Movie();
+                movie.setTitle(obj.getString("title"));
+                movie.setThumbnailUrl(obj.getString("image"));
+                movie.setPrice(obj.getInt("price"));
+                movie.setTag(obj.getString("tag"));
+                movie.setGenre(obj.getString("genre"));
+
+                // adding movie to movies array
+                movieList.add(movie);
+
+            } catch (JSONException e) {
+                e.printStackTrace();
+            }
+
+        }
     }
 
     @Override
