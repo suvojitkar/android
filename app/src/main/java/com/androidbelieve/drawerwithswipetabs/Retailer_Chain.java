@@ -23,11 +23,16 @@ public class Retailer_Chain extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_retailer__chain);
 
+        String loc = getIntent().getExtras().getString("pressed");
+
         map = ((MapFragment) getFragmentManager().findFragmentById(R.id.map)).getMap();
 
-        Marker o = map.addMarker(new MarkerOptions().position(one).title("Chennai One").snippet("This is retailer one."));
-        Marker t = map.addMarker(new MarkerOptions().position(two).title("Chennai Two").snippet("This is retailer two."));
-        Marker th = map.addMarker(new MarkerOptions().position(three).title("Chennai Three").snippet("This is retailer three."));
+        if(loc.equals("one"))
+        map.addMarker(new MarkerOptions().position(one).title("Chennai ABC").snippet("This is retailer one."));
+        else if (loc.equals("two"))
+        map.addMarker(new MarkerOptions().position(two).title("Chennai DEF").snippet("This is retailer two."));
+        else
+        map.addMarker(new MarkerOptions().position(three).title("Chennai GHI").snippet("This is retailer three."));
 
         map.moveCamera(CameraUpdateFactory.newLatLngZoom(one, 15));
         map.animateCamera(CameraUpdateFactory.zoomTo(10),2000,null);

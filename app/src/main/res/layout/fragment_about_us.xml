@@ -6,6 +6,10 @@
     android:padding="10dp"
     android:fillViewport="false">
 
+    <android.support.v7.widget.CardView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
     <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
 
         android:orientation="vertical"
@@ -43,5 +47,5 @@ local roots in more than 100 countries across the globe with annual sales of
 €53.3 billion in 2015. Unilever has 67.25% shareholding in HUL.
 "/>
     </LinearLayout>
-
+    </android.support.v7.widget.CardView>
 </ScrollView>

@@ -2,25 +2,28 @@ package com.androidbelieve.drawerwithswipetabs;
 
 import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
-       import android.os.Bundle;
-       import android.support.annotation.Nullable;
-       import android.support.v4.app.Fragment;
-       import android.view.LayoutInflater;
-       import android.view.View;
-       import android.view.ViewGroup;
-       import android.webkit.WebSettings;
-       import android.webkit.WebView;
-       import android.webkit.WebViewClient;
+import android.os.Bundle;
+import android.support.annotation.Nullable;
+import android.support.v4.app.Fragment;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.ViewGroup;
+import android.webkit.WebSettings;
+import android.webkit.WebView;
+import android.webkit.WebViewClient;
 
+/**
+ * Created by Ratan on 7/29/2015.
+ */
+public class Alert extends Fragment {
 
-public class Pricinga extends Fragment {
-    String url="http://mehuljain160.esy.es/graph.php";
+    String url="http://mehuljain160.esy.es/updates/alerts.php.php";
     private WebView wv1;
 
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        View v = inflater.inflate(R.layout.fragment_pricinga, container, false);
+        View v = inflater.inflate(R.layout.alert, container, false);
 
         wv1=(WebView)v.findViewById(R.id.webView);
         wv1.setWebViewClient(new MyBrowser());

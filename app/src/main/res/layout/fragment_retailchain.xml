@@ -1,16 +1,203 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView
+    android:layout_height="wrap_content"
+    android:layout_width="wrap_content"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical" android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <Button
-        android:id="@+id/bmap"
-        android:layout_width="wrap_content"
+    <!--Retailer 1-->
+    <android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="LAUNCH MAP"
-        android:textColor="#fff"
-        android:background="@color/color_primary_dark"
-        android:layout_centerVertical="true"
-        android:layout_centerHorizontal="true" />
+        android:layout_margin="8dp">
+        <RelativeLayout
+            android:orientation="vertical" android:layout_width="match_parent"
+            android:layout_height="match_parent">
 
-</RelativeLayout>
+            <ImageView
+                android:id="@+id/question_mark"
+                android:layout_width="wrap_content"
+                android:layout_gravity="start"
+                android:padding="10dp"
+                android:layout_height="wrap_content"
+                android:src="@android:drawable/ic_menu_compass"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="30sp"
+                android:layout_toRightOf="@id/question_mark"
+                android:layout_gravity="center"
+                android:layout_marginTop="10dp"
+                android:id="@+id/q1"
+                android:textStyle="bold"
+                android:textColor="@color/colorPrimary"
+                android:text="Retailer ABC"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="15sp"
+                android:layout_gravity="center"
+                android:layout_margin="10dp"
+                android:padding="5dp"
+                android:textStyle="italic"
+                android:id="@+id/address"
+                android:textColor="#008080"
+                android:layout_below="@id/q1"
+                android:text="Address : 12/3 Street Road, Chennai."/>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:padding="4dp"
+                android:id="@+id/divider"
+                android:layout_below="@id/address"
+                android:background="#008080" />
+
+            <Button
+                android:id="@+id/r1"
+                android:layout_width="match_parent"
+                android:background="@android:color/transparent"
+                android:layout_height="wrap_content"
+                android:text="View In Map"
+                android:textColor="#008080"
+                android:layout_below="@+id/address"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentEnd="true" />
+        </RelativeLayout>
+    </android.support.v7.widget.CardView>
+
+    <!--Retailer 2-->
+    <android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp">
+        <RelativeLayout
+            android:orientation="vertical" android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/question_mark2"
+                android:layout_width="wrap_content"
+                android:layout_gravity="start"
+                android:padding="10dp"
+                android:layout_height="wrap_content"
+                android:src="@android:drawable/ic_menu_compass"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="30sp"
+                android:layout_toRightOf="@id/question_mark2"
+                android:layout_gravity="center"
+                android:layout_marginTop="10dp"
+                android:id="@+id/q2"
+                android:textStyle="bold"
+                android:textColor="@color/colorPrimary"
+                android:text="Retailer DEF"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="15sp"
+                android:layout_gravity="center"
+                android:layout_margin="10dp"
+                android:padding="5dp"
+                android:textStyle="italic"
+                android:id="@+id/address2"
+                android:textColor="#008080"
+                android:layout_below="@id/q2"
+                android:text="Address : 32/5 Street Road, Chennai."/>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:padding="4dp"
+                android:id="@+id/divider2"
+                android:layout_below="@id/address2"
+                android:background="#008080" />
+
+            <Button
+                android:id="@+id/r2"
+                android:layout_width="match_parent"
+                android:background="@android:color/transparent"
+                android:layout_height="wrap_content"
+                android:text="View In Map"
+                android:textColor="#008080"
+                android:layout_below="@+id/address2"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentEnd="true" />
+        </RelativeLayout>
+    </android.support.v7.widget.CardView>
+
+    <!--Retailer 3-->
+    <android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp">
+        <RelativeLayout
+            android:orientation="vertical" android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/question_mark3"
+                android:layout_width="wrap_content"
+                android:layout_gravity="start"
+                android:padding="10dp"
+                android:layout_height="wrap_content"
+                android:src="@android:drawable/ic_menu_compass"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="30sp"
+                android:layout_toRightOf="@id/question_mark3"
+                android:layout_gravity="center"
+                android:layout_marginTop="10dp"
+                android:id="@+id/q3"
+                android:textStyle="bold"
+                android:textColor="@color/colorPrimary"
+                android:text="Retailer GHI"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="15sp"
+                android:layout_gravity="center"
+                android:layout_margin="10dp"
+                android:padding="5dp"
+                android:textStyle="italic"
+                android:id="@+id/address3"
+                android:textColor="#008080"
+                android:layout_below="@id/q3"
+                android:text="Address : 678 High Road, Chennai."/>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:padding="4dp"
+                android:id="@+id/divider3"
+                android:layout_below="@id/address3"
+                android:background="#008080" />
+
+            <Button
+                android:id="@+id/r3"
+                android:layout_width="match_parent"
+                android:background="@android:color/transparent"
+                android:layout_height="wrap_content"
+                android:text="View In Map"
+                android:textColor="#008080"
+                android:layout_below="@+id/address3"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentEnd="true" />
+        </RelativeLayout>
+    </android.support.v7.widget.CardView>
+
+</LinearLayout>
+</ScrollView>

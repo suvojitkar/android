@@ -128,4 +128,11 @@ public class MainActivity extends AppCompatActivity{
                 mDrawerToggle.syncState();
 
     }
+
+    @Override
+    protected void onPause() {
+        super.onPause();
+        finish();
+
+    }
 }
