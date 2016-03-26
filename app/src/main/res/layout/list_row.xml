@@ -13,8 +13,8 @@
     <!-- Thumbnail Image -->
     <com.android.volley.toolbox.NetworkImageView
         android:id="@+id/thumbnail"
-        android:layout_width="80dp"
-        android:layout_height="80dp"
+        android:layout_width="100dp"
+        android:layout_height="120dp"
         android:padding="2dp"
         android:layout_alignParentLeft="true"
         android:layout_marginRight="8dp" />

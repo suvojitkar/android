@@ -8,16 +8,14 @@ import java.util.ArrayList;
 import java.util.ArrayList;
 
 public class Movie {
-    private String title, thumbnailUrl;
+    private String title, thumbnailUrl,tag,genre;
     private int price;
-    private double tag;
-    private ArrayList<String> genre;
 
     public Movie() {
     }
 
-    public Movie(String name, String thumbnailUrl, int price, double tag,
-                 ArrayList<String> genre) {
+    public Movie(String name, String thumbnailUrl, int price, String tag,
+                 String genre) {
         this.title = name;
         this.thumbnailUrl = thumbnailUrl;
         this.price = price;
@@ -49,19 +47,19 @@ public class Movie {
         this.price = price;
     }
 
-    public double getTag() {
+    public String getTag() {
         return tag;
     }
 
-    public void setTag(double tag) {
+    public void setTag(String tag) {
         this.tag = tag;
     }
 
-    public ArrayList<String> getGenre() {
+    public String getGenre() {
         return genre;
     }
 
-    public void setGenre(ArrayList<String> genre) {
+    public void setGenre(String genre) {
         this.genre = genre;
     }
 

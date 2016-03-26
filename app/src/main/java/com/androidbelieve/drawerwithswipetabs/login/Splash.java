@@ -2,8 +2,10 @@ package com.androidbelieve.drawerwithswipetabs.login;
 
 import android.app.Activity;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 
+import com.androidbelieve.drawerwithswipetabs.MainActivity;
 import com.androidbelieve.drawerwithswipetabs.R;
 
 public class Splash extends Activity {
@@ -33,8 +35,20 @@ public class Splash extends Activity {
             Thread.sleep(65);
             changePercent(i);
           }
-          Intent intent = new Intent(Splash.this,Login.class);
+          SharedPreferences pref = getApplicationContext().getSharedPreferences("MyPref", MODE_PRIVATE);
+
+          //getSharedPref from Boolean loggedin
+          boolean l = pref.getBoolean("loggedin",false);
+
+          Intent intent;
+          if(l == false)
+          intent = new Intent(Splash.this,Login.class);
+
+          else
+          intent = new Intent(Splash.this,MainActivity.class);
+
           startActivity(intent);
+
         } catch (InterruptedException e) {
           e.printStackTrace();
         }
@@ -59,5 +73,11 @@ public class Splash extends Activity {
         animatedCircleLoadingView.resetLoading();
       }
     });
+  }
+
+  @Override
+  protected void onPause() {
+    super.onPause();
+    finish();
   }
 }

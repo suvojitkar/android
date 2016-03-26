@@ -25,7 +25,7 @@ public class CustomListAdapter extends BaseAdapter {
     private Activity activity;
     private LayoutInflater inflater;
     private List<Movie> movieItems;
-    int count = 0;
+    int count;
     ImageLoader imageLoader = AppController.getInstance().getImageLoader();
 
     public CustomListAdapter(Activity activity, List<Movie> movieItems) {
@@ -80,16 +80,10 @@ public class CustomListAdapter extends BaseAdapter {
         title.setText(m.getTitle());
 
         // tag
-        tag.setText("" + String.valueOf(m.getTag()));
+        tag.setText(m.getTag());
 
         // genre
-        String genreStr = "";
-        for (String str : m.getGenre()) {
-            genreStr += str + ", ";
-        }
-        genreStr = genreStr.length() > 0 ? genreStr.substring(0,
-                genreStr.length() - 2) : genreStr;
-        genre.setText(genreStr);
+        genre.setText(m.getGenre());
 
         // price
         price.setText(String.valueOf(m.getPrice()));

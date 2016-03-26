@@ -26,10 +26,12 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:paddingTop="30dp"
-            android:text="Join Our Team"
-            android:textSize="15sp"
-            android:textColor="@color/yellow"
+            android:paddingTop="20dp"
+            android:text="Join our team"
+            android:layout_gravity="center"
+            android:textSize="25sp"
+            android:textStyle="bold"
+            android:textColor="@color/color_primary_dark"
             android:gravity="center"/>
 
 
@@ -37,6 +39,7 @@
             android:layout_width="250dp"
             android:layout_height="30dp"
             android:hint="Name"
+            android:singleLine="true"
             android:textColorHint="@color/white"
             android:layout_marginTop="20dp"
             android:textColor="@color/white"
@@ -48,6 +51,7 @@
             android:layout_width="250dp"
             android:layout_height="30dp"
             android:hint="Email-id"
+            android:singleLine="true"
             android:textColorHint="@color/white"
             android:layout_marginTop="20dp"
             android:textColor="@color/white"
@@ -60,9 +64,10 @@
         <EditText
             android:layout_width="250dp"
             android:layout_height="30dp"
-            android:hint="Username"
+            android:hint="User Name"
             android:id="@+id/TFusername_register"
             android:layout_marginTop="20dp"
+            android:singleLine="true"
             android:textColorHint="@color/white"
             android:layout_gravity="center"
             android:textColor="@color/white"
@@ -74,6 +79,7 @@
             android:layout_width="250dp"
             android:layout_height="30dp"
             android:hint="Password"
+            android:singleLine="true"
             android:layout_marginTop="20dp"
             android:textColorHint="@color/white"
             android:layout_gravity="center"
@@ -88,6 +94,7 @@
             android:hint="Confirm Password"
             android:layout_marginTop="20dp"
             android:textColorHint="@color/white"
+            android:singleLine="true"
             android:layout_gravity="center"
             android:textColor="@color/white"
             android:inputType="textPassword"
@@ -100,19 +107,21 @@
             android:layout_marginTop="20dp"
             android:layout_height="35dp"
             android:layout_gravity="center"
-            android:background="@color/yellow"
+            android:textColor="#fff"
+            android:textSize="18sp"
+            android:background="@color/color_primary_dark"
             android:onClick="onRegisterClick"
             android:text="Sign up"/>
+
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:onClick="onLoginClick"
             android:text="Login"
             android:gravity="center"
+            android:textSize="18sp"
             android:layout_marginTop="20dp"
-            android:textColor="@color/yellow"/>
-
-
-</LinearLayout>
+            android:textColor="@color/color_primary_dark"/>
     </LinearLayout>
-    </ScrollView>
+</LinearLayout>
+</ScrollView>

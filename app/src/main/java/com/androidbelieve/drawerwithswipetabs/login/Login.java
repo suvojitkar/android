@@ -2,7 +2,9 @@ package com.androidbelieve.drawerwithswipetabs.login;
 
 import android.app.AlertDialog;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.preference.PreferenceManager;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.View;
@@ -18,6 +20,7 @@ public class Login extends AppCompatActivity {
 
     EditText etusername , etpassword;
     LocalDatabase localDatabase;
+    SharedPreferences pref;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -52,30 +55,41 @@ public class Login extends AppCompatActivity {
         ServerRequests serverRequests = new ServerRequests(Login.this);
 
 
-        serverRequests.fetchDataInBackground(contact , new GetUserCallback() {
+        serverRequests.fetchDataInBackground(contact, new GetUserCallback() {
 
             @Override
             public void done(Contact returnedContact) {
-                if(returnedContact == null)
-                {
+                if (returnedContact == null) {
                     //show an error message
                     AlertDialog.Builder builder = new AlertDialog.Builder(Login.this);
                     builder.setMessage("Username & Password don't match!");
-                    builder.setPositiveButton("OK" , null);
+                    builder.setPositiveButton("OK", null);
                     builder.show();
 
-                }
-                else
-                {
+                } else {
                     //Log user in
                     localDatabase.storeData(returnedContact);
                     localDatabase.setUserLoggedIn(true);
 
-                    Intent intent = new Intent(Login.this , MainActivity.class);
+                    Intent intent = new Intent(Login.this, MainActivity.class);
                     startActivity(intent);
+
+                    pref = getApplicationContext().getSharedPreferences("MyPref", MODE_PRIVATE);
+                    SharedPreferences.Editor editor = pref.edit();
+
+                    //Logged In, set loggedin to true boolean
+                    editor.putBoolean("loggedin", true);
+                    editor.commit();
                 }
 
             }
         });
     }
+
+    @Override
+    protected void onPause() {
+        super.onPause();
+        finish();
+    }
+
 }

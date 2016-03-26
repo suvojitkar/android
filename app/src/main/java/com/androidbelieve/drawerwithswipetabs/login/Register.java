@@ -31,7 +31,7 @@ public class Register extends Activity {
 
     public void onLoginClick(View view)
     {
-        Intent intent = new Intent(Register.this , MainActivity.class);
+        Intent intent = new Intent(Register.this , Login.class);
         startActivity(intent);
     }
 
