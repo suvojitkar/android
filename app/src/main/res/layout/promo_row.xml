@@ -13,7 +13,7 @@
             android:layout_width="match_parent"
             android:layout_height="3dp"
             android:gravity="center"
-            android:background="#008080"
+            android:background="#0f6cb2"
             android:padding="7dp"
             android:textColor="#fff"
             android:textStyle="bold"
@@ -29,7 +29,7 @@
             android:padding="7dp"
             android:text="Product"
             android:textSize="22sp"
-            android:textColor="#008080"
+            android:textColor="#0f6cb2"
             android:textStyle="bold"
             android:layout_below="@id/header" />
 
@@ -39,7 +39,7 @@
             android:layout_height="2dp"
             android:padding="2dp"
             android:id="@+id/divider"
-            android:background="#008080"
+            android:background="#0f6cb2"
             android:layout_below="@id/product"
             android:layout_alignRight="@+id/bdate"
             android:layout_alignEnd="@+id/bdate" />

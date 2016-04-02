@@ -10,7 +10,7 @@
     <item android:title="PRODUCTS"
         android:id="@+id/products"
 
-        android:icon="@drawable/inbox"/>
+        android:icon="@drawable/products"/>
 
     <item android:title="">
         <menu>
@@ -18,10 +18,10 @@
         </menu>
     </item>
 
-    <item android:title="FINANCE"
+    <item android:title="INVOICE"
         android:id="@+id/finance"
 
-        android:icon="@drawable/inbox"/>
+        android:icon="@drawable/finance"/>
 
     <item android:title="">
         <menu>
@@ -31,7 +31,7 @@
 
     <item android:title="SALES AND MARKETING"
         android:id="@+id/salesandmarketing"
-        android:icon="@drawable/inbox"/>
+        android:icon="@drawable/sales"/>
 
     <item android:title="">
         <menu>
@@ -41,7 +41,7 @@
 
     <item android:title="NOTIFICATION"
         android:id="@+id/notification"
-        android:icon="@drawable/inbox"/>
+        android:icon="@drawable/notifications"/>
     <item android:title="">
         <menu>
 
@@ -51,7 +51,7 @@
 
     <item android:title="ABOUT US"
         android:id="@+id/aboutus"
-        android:icon="@drawable/inbox"/>
+        android:icon="@drawable/abouts"/>
     <item android:title="">
         <menu>
 
@@ -60,7 +60,7 @@
 
     <item android:title="REPORTS"
         android:id="@+id/reports"
-        android:icon="@drawable/inbox"/>
+        android:icon="@drawable/reports"/>
     <item android:title="">
         <menu>
 
@@ -69,7 +69,7 @@
 
     <item android:title="TRACKING STATUS"
         android:id="@+id/track"
-        android:icon="@drawable/inbox"/>
+        android:icon="@drawable/tracking"/>
     <item android:title="">
         <menu>
 
@@ -78,7 +78,7 @@
 
     <item android:title="CONTACT US"
         android:id="@+id/contactus"
-        android:icon="@drawable/inbox"/>
+        android:icon="@drawable/contactus"/>
     <item android:title="">
         <menu>
 
@@ -87,7 +87,7 @@
 
     <item android:title="FAQ"
         android:id="@+id/faq"
-        android:icon="@drawable/inbox"/>
+        android:icon="@drawable/faq"/>
 
     <item android:title="">
         <menu>
@@ -111,7 +111,7 @@
 
         <item android:title="MY ACCOUNT"
               android:id="@+id/myaccount"
-            android:icon="@drawable/inbox"/>
+            android:icon="@drawable/myaccount"/>
 
     </group>
 

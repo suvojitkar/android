@@ -1,13 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="Encoding">
-    <file url="file://$PROJECT_DIR$/app/src/main/java/com/androidbelieve/drawerwithswipetabs/app/AppConfig.java" charset="windows-1252" />
-    <file url="file://$PROJECT_DIR$/app/src/main/java/com/androidbelieve/drawerwithswipetabs/app/MyApplication.java" charset="windows-1252" />
-    <file url="file://$PROJECT_DIR$/app/src/main/java/com/androidbelieve/drawerwithswipetabs/helper/NotificationUtils.java" charset="windows-1252" />
-    <file url="file://$PROJECT_DIR$/app/src/main/java/com/androidbelieve/drawerwithswipetabs/helper/ParseUtils.java" charset="windows-1252" />
-    <file url="file://$PROJECT_DIR$/app/src/main/java/com/androidbelieve/drawerwithswipetabs/helper/PrefManager.java" charset="windows-1252" />
-    <file url="file://$PROJECT_DIR$/app/src/main/java/com/androidbelieve/drawerwithswipetabs/model/Message.java" charset="windows-1252" />
-    <file url="file://$PROJECT_DIR$/app/src/main/java/com/androidbelieve/drawerwithswipetabs/receiver/CustomPushReceiver.java" charset="windows-1252" />
     <file url="PROJECT" charset="UTF-8" />
   </component>
 </project>

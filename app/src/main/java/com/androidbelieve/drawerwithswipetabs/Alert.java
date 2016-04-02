@@ -17,7 +17,7 @@ import android.webkit.WebViewClient;
  */
 public class Alert extends Fragment {
 
-    String url="http://mehuljain160.esy.es/updates/alerts.php.php";
+    String url="http://mehuljain160.esy.es/updates/alerts.php";
     private WebView wv1;
 
     @Nullable

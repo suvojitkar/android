@@ -22,12 +22,23 @@ import com.androidbelieve.drawerwithswipetabs.login.Login;
 public class Myaccount extends Fragment {
 
     Button logout;
-    SharedPreferences pref;
+    SharedPreferences pref,spref;
+    TextView nn,mm;
 
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        View v =  inflater.inflate(R.layout.fragment_myaccount,null);
+        View v =  inflater.inflate(R.layout.fragment_myaccount, null);
+
+        nn = (TextView) v.findViewById(R.id.name);
+        mm = (TextView) v.findViewById(R.id.mail);
+
+        spref = PreferenceManager.getDefaultSharedPreferences(getActivity());
+        String name = spref.getString("Name","Name");
+        String mail = spref.getString("Email","Email");
+
+        nn.setText(name);
+        mm.setText(mail);
 
         logout = (Button) v.findViewById(R.id.logout);
 
@@ -45,14 +56,13 @@ public class Myaccount extends Fragment {
                 Toast.makeText(getActivity(),"Logged Out Successfully",Toast.LENGTH_SHORT).show();
                 Intent i = new Intent(getContext(), Login.class);
                 startActivity(i);
+                MainActivity.getInstance().finish();
             }
         });
 
         return v;
     }
-
     public void dialog(View view) {
-
         final Dialog dialog = new Dialog(getActivity());
         // Include dialog.xml file
         dialog.setContentView(R.layout.dialog);

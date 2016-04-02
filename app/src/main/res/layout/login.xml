@@ -72,7 +72,7 @@
             android:text="Forgot password?"
             android:gravity="center"
             android:layout_marginTop="20dp"
-            android:textColor="@color/color_primary_dark"/>
+            android:textColor="#fff"/>
 
         <TextView
             android:layout_width="match_parent"
@@ -83,7 +83,7 @@
             android:gravity="center"
             android:textSize="18sp"
             android:layout_marginTop="10dp"
-            android:textColor="@color/white"/>
+            android:textColor="@color/color_primary_dark"/>
 
     </LinearLayout>
 

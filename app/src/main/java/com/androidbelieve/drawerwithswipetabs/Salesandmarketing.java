@@ -16,7 +16,7 @@ public class Salesandmarketing extends Fragment {
 
     public static TabLayout tabLayout;
     public static ViewPager viewPager;
-    public static int int_items = 5 ;
+    public static int int_items = 3 ;
 
     @Nullable
     @Override
@@ -66,9 +66,7 @@ public class Salesandmarketing extends Fragment {
             switch (position){
                 case 0 : return new promo();
                 case 1 : return new calander();
-                case 2 : return new proavail();
-                case 3 : return new nextorder();
-                case 4 : return new retailchain();
+                case 2 : return new retailchain();
             }
             return null;
         }
@@ -93,10 +91,6 @@ public class Salesandmarketing extends Fragment {
                 case 1 :
                     return "CALENDER OF KEYS EVENTS";
                 case 2 :
-                    return "PRODUCT AVAILABILITY";
-                case 3 :
-                    return "NEXT ORDER DATE";
-                case 4 :
                     return "RETAILER CHAIN";
 
             }

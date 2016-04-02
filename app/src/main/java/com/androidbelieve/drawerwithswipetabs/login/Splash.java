@@ -30,9 +30,9 @@ public class Splash extends Activity {
       @Override
       public void run() {
         try {
-          Thread.sleep(1500);
+          Thread.sleep(800);
           for (int i = 0; i <= 100; i++) {
-            Thread.sleep(65);
+            Thread.sleep(30);
             changePercent(i);
           }
           SharedPreferences pref = getApplicationContext().getSharedPreferences("MyPref", MODE_PRIVATE);

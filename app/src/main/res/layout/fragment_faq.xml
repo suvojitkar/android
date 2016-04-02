@@ -30,14 +30,14 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textSize="30sp"
+                android:textSize="20sp"
                 android:layout_toRightOf="@id/question_mark"
                 android:layout_gravity="center"
                 android:layout_marginTop="10dp"
                 android:id="@+id/q1"
                 android:textStyle="bold"
                 android:textColor="@color/colorPrimary"
-                android:text="Question 1"/>
+                android:text="I have purchased HUL shares, how do I get them registered in my name and how long will it take?"/>
 
             <TextView
                 android:layout_width="wrap_content"
@@ -48,7 +48,9 @@
                 android:padding="5dp"
                 android:textColor="@color/design_snackbar_background_color"
                 android:layout_below="@id/q1"
-                android:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean eget leo non turpis maximus feugiat. Maecenas quam enim, aliquam id dui id, venenatis congue augue. Etiam faucibus, est a efficitur mollis, dolor magna consequat mi, ac condimentum purus diam sagittis massa. Aenean quis dolor eu diam lobortis convallis."/>
+                android:text="You will have to send the share certificates and the Share Transfer Deed (available with Stock Exchange/Share Brokers) duly filled in, executed and affixed with share transfer stamps at 0.25% of the market value on the date of execution of the transfer deed.
+
+Please note that copies of self attested pan cards of all the transferees are mandatory for registration of transfers."/>
         </RelativeLayout>
     </android.support.v7.widget.CardView>
 
@@ -73,14 +75,14 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:textSize="30sp"
+                    android:textSize="20sp"
                     android:layout_toRightOf="@id/question_mark2"
                     android:layout_gravity="center"
                     android:layout_marginTop="10dp"
                     android:id="@+id/q2"
                     android:textStyle="bold"
                     android:textColor="@color/colorPrimary"
-                    android:text="Question 2"/>
+                    android:text="How does the Depository System operate?"/>
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -91,7 +93,11 @@
                     android:padding="5dp"
                     android:textColor="@color/design_snackbar_background_color"
                     android:layout_below="@id/q2"
-                    android:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean eget leo non turpis maximus feugiat. Maecenas quam enim, aliquam id dui id, venenatis congue augue. Etiam faucibus, est a efficitur mollis, dolor magna consequat mi, ac condimentum purus diam sagittis massa. Aenean quis dolor eu diam lobortis convallis."/>
+                    android:text="The operations in the Depository System involve the Depositories, Depository Participants, Company/Registrars and Investors.
+
+A Depository (NSDL and CDSL) is an organisation like a Central Bank, i.e. Reserve Bank where the securities of an investor are held in the electronic form through Depository Participants.
+
+A Depository Participant is the agent of the Depository and is the medium through which shares are held in the electronic form. They are also the representatives of the Investor, providing the link between the Investor and the Company/ Registrar through the Depository."/>
             </RelativeLayout>
         </android.support.v7.widget.CardView>
 
@@ -116,14 +122,14 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:textSize="30sp"
+                    android:textSize="20sp"
                     android:layout_toRightOf="@id/question_mark3"
                     android:layout_gravity="center"
                     android:layout_marginTop="10dp"
                     android:id="@+id/q3"
                     android:textStyle="bold"
                     android:textColor="@color/colorPrimary"
-                    android:text="Question 3"/>
+                    android:text="My shares are held in joint names. Are the joint holders nominees to the shares?"/>
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -134,7 +140,7 @@
                     android:padding="5dp"
                     android:textColor="@color/design_snackbar_background_color"
                     android:layout_below="@id/q3"
-                    android:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean eget leo non turpis maximus feugiat. Maecenas quam enim, aliquam id dui id, venenatis congue augue. Etiam faucibus, est a efficitur mollis, dolor magna consequat mi, ac condimentum purus diam sagittis massa. Aenean quis dolor eu diam lobortis convallis."/>
+                    android:text="Joint holders are not nominees. They are joint holders of the relevant shares. In the event of death of any one of the joint holders, the surviving joint holder/s of the shares is/are the only person/persons recognized by the Company as the holders of the shares."/>
             </RelativeLayout>
         </android.support.v7.widget.CardView>
 
@@ -159,14 +165,14 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:textSize="30sp"
+                    android:textSize="20sp"
                     android:layout_toRightOf="@id/question_mark4"
                     android:layout_gravity="center"
                     android:layout_marginTop="10dp"
                     android:id="@+id/q4"
                     android:textStyle="bold"
                     android:textColor="@color/colorPrimary"
-                    android:text="Question 4"/>
+                    android:text="A and B had shares in HUL. Both of them died. How do I get the shares transmitted in my name?"/>
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -177,7 +183,7 @@
                     android:padding="5dp"
                     android:textColor="@color/design_snackbar_background_color"
                     android:layout_below="@id/q4"
-                    android:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean eget leo non turpis maximus feugiat. Maecenas quam enim, aliquam id dui id, venenatis congue augue. Etiam faucibus, est a efficitur mollis, dolor magna consequat mi, ac condimentum purus diam sagittis massa. Aenean quis dolor eu diam lobortis convallis."/>
+                    android:text="To get the shares transmitted in your name, kindly obtain a Succession Certificate/Letter of Administration of the last deceased joint holder in your favour and follow the procedure for transmission of shares."/>
             </RelativeLayout>
         </android.support.v7.widget.CardView>
 

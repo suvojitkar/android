@@ -16,7 +16,7 @@ public class Reports extends Fragment {
 
     public static TabLayout tabLayout;
     public static ViewPager viewPager;
-    public static int int_items = 3 ;
+    public static int int_items = 2 ;
 
     @Nullable
     @Override
@@ -64,9 +64,9 @@ public class Reports extends Fragment {
         public Fragment getItem(int position)
         {
             switch (position){
-                case 0 : return new Orderr();
-                case 1 : return new Pricinga();
-                case 2 : return new Paymentr();
+
+                case 0 : return new Pricinga();
+                case 1: return new Paymentr();
             }
             return null;
         }
@@ -87,10 +87,10 @@ public class Reports extends Fragment {
 
             switch (position){
                 case 0 :
-                    return "ORDER REPORT";
-                case 1 :
                     return "PRICING ANALYTICS";
-                case 2 :
+
+
+                case 1 :
                     return "PAYMENT REPORTS";
             }
             return null;
